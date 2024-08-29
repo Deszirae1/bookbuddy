@@ -6,6 +6,8 @@ const client = new pg.Client({
   database: process.env.DB_NAME,
 });
 
+console.log(client); 
+
 module.exports = client;
 
 
