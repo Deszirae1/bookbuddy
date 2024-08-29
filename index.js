@@ -1,9 +1,14 @@
 const express = require("express");
 const app = express();
+
+const PORT = 3000;
+
 require("dotenv").config();
+
+console.log(process.env.TEST_VAR);
 const client = require("./db/client");
 client.connect();
-const PORT = 3000;
+
 
 app.use(express.json());
 // we're registering the routes in /api/index.js ===> IOW, request to /api ---> send request to /api/index.js
